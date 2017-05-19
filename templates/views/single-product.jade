@@ -1,0 +1,55 @@
+extends ../layouts/default
+
+block content
+    .gapp
+    .section-center
+        h1.section-heading= Product.prod_name
+            hr.underline
+    
+    section.container
+        .breadcram.img-brand
+            a.bt Home
+            |   &#47;  
+            a(href = "/collections/" + Product.cat_name).bt= Product.category  
+            |   &#47;  
+            span=Product.prod_name
+        
+
+
+        .col-sm-5.section-image2
+            image(src=Product.image, width='100%',height='380px')
+
+        .col-sm-7.pad6
+            h3.mar1= Product.prod_name
+            .gap
+
+            .dot
+                | ITEM # 330217
+
+            h4 Product Discription
+
+            p.section-para3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                |   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                |   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+            #abc(onload = "div_hide()")
+                #popupcontact
+                    form#form5(action='/collections',method='post',name='form')
+                        h2.h10 Contact Us
+                        i.fa.fa-times.form-close(onclick = "div_hide()")
+                        hr.hr10
+                        #button4
+                            .item_id
+                                h3.mar1=Product.prod_name
+
+                        input#name.input5(name='name', placeholder='Name', type='text')
+                        input#email.input5(name='email', placeholder='Email', type='text')
+                        input#item_id.input5(name='item_id',value=Product.prod_name, type='text')
+                        textarea#message.textarea10(name='message', placeholder='Message', type='text')
+                        #return-text
+                        button#submit.btn.btn-sm(onclick='SUBMIT() ', check_empty(), type='submit', value='Send') Submit
+                        //- a#submit(onclick='SUBMIT()') Submit
+                        //- a#submit(onclick='SUBMIT()',href='javascript:%20check_empty()') Submit
+            button3#popup(onclick='div_show()') CONTACT US NOW
+           
+    .gapp

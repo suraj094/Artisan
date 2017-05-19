@@ -1,0 +1,363 @@
+extends ../layouts/default
+
+block intro
+    .container.collection-container
+        //- .section-center
+            h1.section-heading= Product.category
+                hr.underline
+        .section-height
+            .col-md-3
+                section.base-col
+                    form.form-inline(role="search", action="/search", method="GET")
+                        fieldset.pad.pad5
+                            
+                            input.form-part2(type="text", id="keywords", name="keywords", placeholder="search") 
+                            button.ico(type='submit') 
+                                <i class="fa fa-search fa-spacing" aria-hidden='true'></i>
+                    h3.filter-heading base colour
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'color' value = 'BLUE')#cb1
+                            label(for = 'cb1') blue
+                        li
+                            input(type = 'checkbox' name = 'color' value = 'GREEN')#cb2
+                            label(for = 'cb2') green
+                        li
+                            input(type = 'checkbox' name = 'color' value = 'YELLOW')#cb3
+                            label(for = 'cb3') yellow
+                        li
+                            input(type = 'checkbox' name = 'color' value = 'RED')#cb4
+                            label(for = 'cb4') red
+                        li
+                            input(type = 'checkbox' name = 'color' value = 'GREY')#cb5
+                            label(for = 'cb5') grey
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'BLACK')#cb6
+                            label(for = 'cb6') BLACK
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'WHITE')#cb7
+                            label(for = 'cb7') white
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'SILVER')#cb8
+                            label(for = 'cb8') silver
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'BEIGE')#cb9
+                            label(for = 'cb9') beige
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'ORANGE')#cb10
+                            label(for = 'cb10') orange
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'PINK')#cb11
+                            label(for = 'cb11') pink
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'BROWN')#cb12
+                            label(for = 'cb12') brown
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'GOLD')#cb13
+                            label(for = 'cb13') gold
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'PURPLE')#cb14
+                            label(for = 'cb14') purple
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'MUSTARD')#cb15
+                            label(for = 'cb15') mustard
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'COPPER')#cb16
+                            label(for = 'cb16') copper
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'TEAL')#cb17
+                            label(for = 'cb17') teal
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'MAROON')#cb18
+                            label(for = 'cb18') maroon
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'VIOLET')#cb19
+                            label(for = 'cb19') violet
+                        li.cb1
+                            input(type = 'checkbox' name = 'color' value = 'INDIGO')#cb20
+                            label(for = 'cb20') indigo
+                        button#button-filter1.btn.btn-default(type = 'button') Show More
+                section.base-col
+                    h3.filter-heading accent / pattern
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'pattern' value = 'BLUE')#cb21
+                            label(for = 'cb21') blue
+                        li
+                            input(type = 'checkbox' name = 'pattern' value = 'GREEN')#cb22
+                            label(for = 'cb22') green
+                        li
+                            input(type = 'checkbox' name = 'pattern' value = 'YELLOW')#cb23
+                            label(for = 'cb23') yellow
+                        li
+                            input(type = 'checkbox' name = 'pattern' value = 'RED')#cb24
+                            label(for = 'cb24') red
+                        li
+                            input(type = 'checkbox' name = 'pattern' value = 'GREY')#cb25
+                            label(for = 'cb25') grey
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'BLACK')#cb26
+                            label(for = 'cb26') BLACK
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'WHITE')#cb27
+                            label(for = 'cb27') white
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'SILVER')#cb28
+                            label(for = 'cb28') silver
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'BEIGE')#cb29
+                            label(for = 'cb29') beige
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'ORANGE')#cb30
+                            label(for = 'cb30') orange
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'PINK')#cb31
+                            label(for = 'cb31') pink
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'BROWN')#cb32
+                            label(for = 'cb32') brown
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'GOLD')#cb33
+                            label(for = 'cb33') gold
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'PURPLE')#cb34
+                            label(for = 'cb34') purple
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'MUSTARD')#cb35
+                            label(for = 'cb35') mustard
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'COPPER')#cb36
+                            label(for = 'cb36') copper
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'TEAL')#cb37
+                            label(for = 'cb37') teal
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'MAROON')#cb38
+                            label(for = 'cb38') maroon
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'VIOLET')#cb39
+                            label(for = 'cb39') violet
+                        li.cb1
+                            input(type = 'checkbox' name = 'pattern' value = 'INDIGO')#cb40
+                            label(for = 'cb40') indigo
+                        button#button-filter2.btn.btn-default(type = 'button') Show More
+                section.base-col
+                    h3.filter-heading manufacture / supplier
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'supplier' value = 'CASADECO')#cb41
+                            label(for = 'cb41') casadeco
+                        li
+                            input(type = 'checkbox' name = 'supplier' value = 'GRANDECO')#cb42
+                            label(for = 'cb42') grandeco
+                        li
+                            input(type = 'checkbox' name = 'supplier' value = 'TOMITA')#cb43
+                            label(for = 'cb43') tomita
+                        li
+                            input(type = 'checkbox' name = 'supplier' value = 'DESIMA')#cb44
+                            label(for = 'cb44') desima
+                        li
+                            input(type = 'checkbox' name = 'supplier' value = 'YORK')#cb45
+                            label(for = 'cb45') york wall coverings
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'ARTISAN')#cb46
+                            label(for = 'cb46') artisan furnishing
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'GALERIE')#cb47
+                            label(for = 'cb47') GALERIE wallcoverings
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'J.JOSEPHSONS')#cb48
+                            label(for = 'cb48') j.josephsons
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'INNOVATIONS')#cb49
+                            label(for = 'cb49') innovations in design
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'GALERIE')#cb50
+                            label(for = 'cb50') galerie
+                        li.cb3
+                            input(type = 'checkbox' name = 'supplier' value = 'ROYSONS')#cb51
+                            label(for = 'cb51') roysons
+                        button#button-filter3.btn.btn-default(type = 'button') Show More
+                section.base-col
+                    h3.filter-heading collection
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'Collection' value = 'CHROME')#cb52
+                            label(for = 'cb52') CHROME
+                        li
+                            input(type = 'checkbox' name = 'Collection' value = 'DESIGNER')#cb53
+                            label(for = 'cb53') DESIGNER DAMASKS
+                        li
+                            input(type = 'checkbox' name = 'Collection' value = 'DORADO')#cb54
+                            label(for = 'cb54') DORADO
+                        li
+                            input(type = 'checkbox' name = 'Collection' value = 'ESSENCE')#cb55
+                            label(for = 'cb55') ESSENCE
+                        li
+                            input(type = 'checkbox' name = 'Collection' value = 'SILVER_LEAF')#cb56
+                            label(for = 'cb56') SILVER LEAF
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'TEXTURED_PLAINS')#cb57
+                            label(for = 'cb57') TEXTURED PLAINS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'UNPLUGGED')#cb58
+                            label(for = 'cb58') UNPLUGGED
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'VINTAGE_DAMASK')#cb59
+                            label(for = 'cb59') VINTAGE DAMASK
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'VILLAGE_PEOPLE')#cb60
+                            label(for = 'cb60') VILLAGE PEOPLE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'OXYDE')#cb61
+                            label(for = 'cb61') OXYDE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'UNPLUGGED')#cb62
+                            label(for = 'cb62') VILLA BORGHESE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'OPAL_ESSENCE')#cb63
+                            label(for = 'cb63') opal essence
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'STOCKBRIDGE')#cb64
+                            label(for = 'cb64') STOCKBRIDGE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'ASHFORD_GEOMETRICS')#cb65
+                            label(for = 'cb65') ASHFORD GEOMETRICS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'WATER_COLORS')#cb66
+                            label(for = 'cb66') WATER COLORS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'JUST_FOR_KIDS')#cb67
+                            label(for = 'cb67') JUST FOR KIDS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'TINY_TOTS')#cb68
+                            label(for = 'cb68') TINY TOTS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'WAVERLY_SMALL_PRINTS')#cb69
+                            label(for = 'cb69') WAVERLY SMALL PRINTS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'BOLTA')#cb70
+                            label(for = 'cb70') BOLTA
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'SYMPHONY')#cb71
+                            label(for = 'cb71') SYMPHONY
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'VYCON')#cb72
+                            label(for = 'cb72') VYCON
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'ALLURE')#cb73
+                            label(for = 'cb73') ALLURE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'RICKY_BUSINESS')#cb74
+                            label(for = 'cb74') RISKY BUSINESS
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'SCULPTURED_SURFACES_1')#cb75
+                            label(for = 'cb75') SCULPTURED SURFACES 1
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'SCULPTURED_SURFACES_2')#cb76
+                            label(for = 'cb76') SCULPTURED SURFACES 2
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'WALT_DISNEY_2')#cb77
+                            label(for = 'cb77') WALT DISNEY 2
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'EMBELLISHED_SURFACE')#cb78
+                            label(for = 'cb78') EMBELLISHED SURFACE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'CANDICE_OLSON_2')#cb79
+                            label(for = 'cb79') CANDICE OLSON 2
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'CANDICE_OLSON_3')#cb80
+                            label(for = 'cb80') CANDICE OLSON 3
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'MEMORIES_2')#cb81
+                            label(for = 'cb81') MEMORIES 2
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'TEMPO')#cb82
+                            label(for = 'cb82') TEMPO
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'STEAMPUNK')#cb83
+                            label(for = 'cb83') STEAMPUNK
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'MODERN_SHAPE')#cb84
+                            label(for = 'cb84') MODERN SHAPE
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'ILLUMINATION')#cb85
+                            label(for = 'cb85') ILLUMINATION
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'BROTHERS_AND_SISTERS_V')#cb86
+                            label(for = 'cb86') BROTHERS AND SISTERS V
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'MOODS_14.1')#cb87
+                            label(for = 'cb87') MOODS 14.1
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'MOODS_14.2')#cb88
+                            label(for = 'cb88') MOODS 14.2
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'FUGA')#cb89
+                            label(for = 'cb89') FUGA
+                        li.cb4
+                            input(type = 'checkbox' name = 'Collection' value = 'NATURAL_INSTINCT')#cb90
+                            label(for = 'cb90') NATURAL INSTINCT
+                        button#button-filter4.btn.btn-default(type = 'button') Show More
+                section.base-col
+                    h3.filter-heading style
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'PLAIN')#cb91
+                            label(for = 'cb91') PLAIN
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'TEXTURE')#cb92
+                            label(for = 'cb92') TEXTURE
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'GEOMETRIC')#cb93
+                            label(for = 'cb93') GEOMETRIC
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'CONTEMPORARY')#cb94
+                            label(for = 'cb94') CONTEMPORARY
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'TRADITIONAL')#cb95
+                            label(for = 'cb95') TRADITIONAL
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'DAMASKS')#cb96
+                            label(for = 'cb96') DAMASKS
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'KIDS')#cb97
+                            label(for = 'cb97') KIDS
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'COMMERCIAL')#cb98
+                            label(for = 'cb98') COMMERCIAL/CAFE
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'RESIDENTIAL')#cb99
+                            label(for = 'cb99') RESIDENTIAL
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'MURAL')#cb100
+                            label(for = 'cb100') MURAL
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'STRIPES')#cb101
+                            label(for = 'cb101') STRIPES
+                        li.cb5
+                            input(type = 'checkbox' name = 'style' value = 'FLORAL')#cb102
+                            label(for = 'cb102') FLORAL
+                        button#button-filter5.btn.btn-default(type = 'button') Show More
+                section.base-col
+                    h3.filter-heading availability
+                    ul.filter-list
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'INSTOCK')#cb91
+                            label(for = 'cb91') IN-STOCK
+                        li
+                            input(type = 'checkbox' name = 'style' value = 'NONSTOCK')#cb92
+                            label(for = 'cb92') NON-STOCK
+                button#button.btn.btn-default(type = 'button') Filter
+            .col-md-9
+                if products.length
+                    each product in products
+                        .col-md-4.category-details
+                            a(href='/products/' + product._id)
+                                img.prod-image(src = product.image)
+                            h3= product.prod_name
+                else
+                    h1.error-msg No Item Under this Category
+
+
+

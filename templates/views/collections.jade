@@ -1,0 +1,9 @@
+extends ../layouts/default
+
+block content
+    .container.collection-container
+            each category in categories
+                .col-md-4.category-details
+                        a(href=category.link)
+                            img(src=category.image, width = "300", height = "300")
+                        h3= category.Name

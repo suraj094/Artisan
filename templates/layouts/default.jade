@@ -1,0 +1,207 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+	//- HTML HEADER
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		title= title || 'Artisan'
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		//- Customise the stylesheet for your site by editing /public/styles/site.sass
+		link(rel='stylesheet', href='/fonts/font-awesome/css/font-awesome.min.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400', rel='stylesheet')
+		link(href="/styles/site.css", rel="stylesheet")
+		link(href="/styles/slick/slick.css",rel="stylesheet")
+		link(href="/styles/slick/slick-theme.css",rel="stylesheet")
+		link(href="/styles/style.css", , rel="stylesheet")
+		link(href="/styles/collections.css", , rel="stylesheet")
+		link(href="/styles/bootstrap/_bootstrap.scss", , rel="stylesheet")
+
+		//- This file provides the default styling for the KeystoneJS Content Editor
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
+			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+		//-[endif]
+
+		//- Include template-specific stylesheets by extending the css block
+		block css
+
+		//- Add any other template-specific HEAD tags by extending the head block
+		block head
+
+	//- HTML BODY
+	body(onload = "checkbox()")
+
+		//- HEADER
+		header
+			nav#header-nav.navbar.navbar-default
+				#cont.container
+					.navbar-header
+						a.pull-left.visible-xs.visible-sm.visible-md.visible-lg(href='/')
+							img.pad5(src='/images/Logo-white.png')
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#collapsable-nav', aria-expanded='false')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+					#collapsable-nav.collapse.navbar-collapse
+						ul#nav-list.nav.navbar-nav.navbar-right
+							li
+								a(href='/') HOME
+							li.dropdown
+								a#color.dropdown-toggle.drop-color(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') ABOUT US
+								ul.dropdown-menu.pad3
+									li
+										a.pad2(href='/aboutus/who-we-our') Who We Are
+									hr.mar1
+									li
+										a.pad2(href='/aboutus/our-vision') Our Vision
+									hr.mar1
+									li
+										a.pad2(href='/aboutus/our-brands') Our Brands
+							li
+								a(href='/collections') COLLECTIONS
+							li.dropdown
+								a#color.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') PRODUCT INFORMATION
+								ul.dropdown-menu.pad3
+									li
+										a.pad2(href='/product-info/why-wall-covering') Why Wall Coverings
+									hr.mar1
+									li
+										a.pad2(href='/product-info/Installation') Installation Guidelines – Surface
+									hr.mar1
+									li
+										a.pad2(href='/product-info/Maintenance') Maintenance
+									hr.mar1
+									li
+										a.pad2(href='/product-info/Warranty') Warranty
+							li
+								a(href='/getintouch') GET IN TOUCH
+
+		//- BODY
+		#body
+
+			//- NOTE:
+			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
+			//- Remember to include it in your templates when you override the intro and content blocks!
+
+			//- The Intro block appears above flash messages (used for temporary information display)
+			block intro
+
+			//- Flash messages allow you to display once-off status messages to users, e.g. form
+			//- validation errors, success messages, etc.
+			+flash-messages(messages)
+
+			//- The content block should contain the body of your template's content
+			block content
+
+
+		//- FOOTER
+		footer
+						.footer1
+							.container
+								.row.row-width
+									.col-md-4
+										h2.footer1-head About Us
+										|                     
+										p.footer1-para
+											| ARTISAN Furnishings Pvt Ltd, leader in importing and distributing & developing Wallcovering, provides with a varied range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA, Europe and Japan.
+										br
+										|                     
+										h2.footer1-head Newsletter
+										|                     
+										p.footer1-para Subscribe to our newsletter
+										|                     
+										form
+											input.text-area(type="text")
+											br
+											|                     
+											a.button(href="#") Subscribe
+										br
+										|                 
+									.col-md-4.col-md-offset-1
+										h2.footer1-head Artisan Furnishings Contact
+										|                     
+										p.footer-para-address
+											span.fa.fa-map-marker.padding
+											| C-143, Lajpat Nagar 1,
+											br
+											|                     
+											span(style="padding-left:24px;")
+											| New Delhi – 110024
+										p.footer-para-address
+											span.fa.fa-phone.padding
+											| 011-41749046,
+											br
+											span(style="padding-left:24px;") 41005869, 41028554
+										|                     
+										p.footer-para-address
+											span.fa.fa-mobile.padding
+											| +91-9205974003
+										|                     
+										p.footer-para-address
+											span.fa.fa-envelope.padding
+											|artisandecor@artisanindia.com
+										|                      
+										ul.social-list
+											li.social-li
+												a(href="https://www.facebook.com/ArtisanFurnishing", target="_blank")
+													span.fa.fa-facebook
+											|                         
+											li.social-li
+												a(href="https://twitter.com/artisan_india", target="_blank")
+													span.fa.fa-twitter
+											//
+											
+											//- <li class="social-li"><a href="#" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+											//- <li class="social-li"><a href="#" target="_blank"><span class="fa fa-google-plus"></span></a></li>
+										|                 
+									.col-md-3.frame
+										iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FArtisanFurnishing&tabs=timeline&width=280&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId", width="280", height="300", style="border:none;overflow:hidden", scrolling="no", frameborder="0", allowtransparency="true")
+									|             
+							.footer2
+									.container
+										p.copyright Copyright © 2016. . All Rights Reserved.
+											|                     
+											p.about
+												a.footer-links(href="#") Terms & Conditions
+												|  |
+												a.footer-links(href="#") Privacy Policy
+												|  |
+												a.footer-links(href="#") About
+												|  |
+												a.footer-links(href="#") Contact
+
+
+		//- JAVASCRIPT
+
+		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		script(src='/js/jquery/jquery-1.11.3.min.js')
+
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.3.5.min.js
+		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		script(src='/styles/slick/slick.js')
+		script(src='/js/style.js')
+		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+		//- which generate links to edit content for users who can access Keystone
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
+
+		//- Add scripts that are globally required by your site here.
+
+		//- Include template-specific javascript files by extending the js block
+		block js

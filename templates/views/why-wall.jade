@@ -1,0 +1,90 @@
+extends ../layouts/default
+
+block content
+		section.banner
+			img(src="../images/slider-2.jpg")
+		.section-center
+				h1.section-heading Why Wall Coverings
+					hr.underline
+		section.container
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/1.png")
+				.col-md-10.col-sm-10
+					h4.row-head Cost Benefit
+					p.row-para Our Vinyl Wallcoverings have an average life of at least 15 years. Although they are more expensive than paint for the initial set up, a lifecycle analysis shows that consumers can save upto 30% in costs over the 15 year lifecycle of our products.
+			hr.row-hr
+
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/2.png")
+				.col-md-10.col-sm-10
+					h4.row-head Aesthetic Appeal
+					p.row-para Modern Wallcoverings contain an aesthetic appeal unmatched by conventional paints. From vibrant colours to traditional designs to contemporary textures and materials, our range of wallcoverings designs appeals to all tastes and design sensibilities.
+			
+			hr.row-hr
+
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/3.png")
+				.col-md-10.col-sm-10
+					h4.row-head Easy and Quick Installation
+					p.row-para With our qualified in house installers, we can complete the installation of your home/office/project in as little as a day, saving you time and unnecessary hassles as compared to conventional paint.
+			
+			hr.row-hr
+			
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/4.png")
+				.col-md-10.col-sm-10
+					h4.row-head Easy to Clean
+					p.row-para Our line of Vinyl wallcoverings have an average life of atleast 15 years. They are dust resistant, which means they stay much cleaner than conventional painted surfaces. They are easy to clean with warm soapy water, leaving them looking as good as new.
+			
+			hr.row-hr
+
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/5.png")
+				.col-md-10.col-sm-10
+					h4.row-head Eco Friendly
+					p.row-para Our Vinyl wallcoverings are sustainable eco friendly products with recycled ink and content. They are extremely energy efficient as compared to conventional paint and keep your rooms cooler in the summers and warmer in the winters.
+			
+			hr.row-hr
+
+			.row
+				.col-md-2.col-sm-2.img-align
+					img.img-att(src="../images/6.png")
+				.col-md-10.col-sm-10
+					h4.row-head Safety
+					p.row-para Conventional Paints contain lead which can be hazardous to health. Our wallcoverings have zero lead content, thereby making them safe to install.
+			
+			hr.row-hr
+
+		
+
+
+
+
+
+
+
+	//.container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

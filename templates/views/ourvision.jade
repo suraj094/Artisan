@@ -1,0 +1,52 @@
+extends ../layouts/default
+
+block content
+
+	section.banner
+		img(src='../images/inner-banner.jpg')
+	.section-center
+		h1.section-heading Our Vision
+			hr.underline
+	section.container
+		div
+			.col-md-3.col-sm-3.col-xs-12.section-image
+				img(src='../images/Designer-Damasks.jpg', width='100%')
+			
+			ul.col-md-9.col-sm-9.col-xs-12.ul-dot
+				li.section-para1
+					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
+					|	 To import and distribute only the best quality of wallcoverings from reputed manufacturers across the world.
+				li.section-para1
+					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
+					|	 To continuously add new products that reflects the latest trends in colour, texture and design.
+				li.section-para1
+					span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
+					|	To provide a professional level of service that ensures 100% customer satisfaction.
+				li.section-para1
+					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
+					|	 To be a responsible organization by promoting the use of Eco Friendly and Sustainable products
+	
+					
+
+	//- .container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

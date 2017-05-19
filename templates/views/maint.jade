@@ -1,0 +1,69 @@
+extends ../layouts/default
+
+block content
+
+	section.banner
+		img(src='../images/slider-2.jpg')
+	.section-center
+		h1.section-heading Maintenance
+			hr.underline
+	section.container
+		div
+			.col-md-3.col-sm-3.col-xs-12.section-image
+				img(src='../images/maintenance.jpg', width='100%')
+			
+			.col-md-9.col-sm-9
+				p.section-para1  One of the characteristics of our vinyl wallcoverings is that it has little or no moisture permeability. This characteristic can be an important benefit in terms of cleanability and wall protection and in limiting interior moisture (e.g., bathrooms) from entering the wall cavity. However, 
+					|	if the design, construction or maintainence of a building, or other circumstances allows liquid or vapour moisture to accumulate in a wall or wall cavity, vinyl wallcoverings can act as a barrier restricting the escape of moisture and increasing the risk of mold growth
+				<br>
+				
+				
+				p.section-para1  Stains should be removed as quickly as possible to eliminate any possible reaction between the staining agent and the wallcovering. Time is especially important for removing materials containing colours, or solvents such as ball point ink, nail polish, lipstick, paint, enamel or food stains.
+
+				<br>
+
+				p.section-para1 Listed below (in the preferred order of use) are the solutions that can be used for cleaning of Vinyl Wallcoverings
+
+				ul.ul-dot
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
+						|	Clear Warm Water
+					
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
+						|	 Mild Soapy Warm Water, then rinse
+					
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
+						|	Isopropyl Alcohol (also known as rubbing alcohol)
+					
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
+						|	Do not use solvent based cleaning agents or cleaning agents containing bleach, as they may cause discoloration over a period of time.
+					
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
+						|	It is recommended that all cleaning be done with a natural sponge and not polyester sponges. A cloth or soft towel should be used to tamp dry the surface after cleaning (do not rub)
+
+	//- .container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

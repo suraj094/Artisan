@@ -1,0 +1,44 @@
+extends ../layouts/default
+
+block content
+
+	section.banner
+		img(src='../images/inner-banner.jpg')
+	.section-center
+		h1.section-heading Our Brands
+			hr.underline
+	section.container
+		div
+			.col-md-3.col-sm-3.col-xs-12.section-image
+				img(src='../images/Designer-Damasks.jpg', width='100%')
+			
+			.col-md-9.col-sm-9
+				p.section-para1 Artisan India wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
+				img.img-brand(src='../images/Brands-1024x207.jpg', width='90%')
+				<br><br>
+				h4(style='padding-left: 20px')   Our Partners
+				p.section-para1 Artisanindia wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
+					
+
+	//- .container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

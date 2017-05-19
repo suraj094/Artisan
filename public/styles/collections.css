@@ -1,0 +1,489 @@
+     *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+/*  header**/
+#header-nav {
+  background-color:#191919;
+  
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 20px 0 0 0;
+  z-index: 999;
+  border: 0px;
+  border-radius: 0px;
+ 
+}
+
+.navbar-header button.navbar-toggle {
+    border: 1px solid white;
+  clear: both;
+  margin-top: -30px;
+}
+.gapp{
+    height: 100px;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+
+/*.navbar-default navbar-nav open a, .navbar-default navbar-nav open a:focus, .navbar-default navbar-nav open a:hover {
+    background-color: #191919 !important;
+}*/
+
+#color{
+    background-color: #191919 !important;
+}
+
+#nav-list ul li a{
+     color: black;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 20px;
+
+}
+#nav-list a {
+  color: white;
+  text-align: left;
+  font-size: 13px;
+  padding: 10px 10px;
+}
+#nav-list ul li a:hover{
+    color: #c8ad7f;
+    background-color: #191919;
+}
+
+.pad2{
+    background-color: #c8ad7f;
+    text-align: left;
+}
+
+#nav-list ul li a:hover{
+    color: #c8ad7f;
+    background-color: #191919;
+}
+
+.pad3{
+    padding: 0px;
+    border-radius: 0px;
+}
+.pad5{
+   padding-bottom:20px;
+   }
+.mar1{
+    margin: 0px;
+}
+/** header**/
+.banner{
+    height: 400px;
+
+}
+.img-brand{
+    margin: 20px;
+    
+}
+
+.pad{
+    padding-top: 20px;
+}
+.pad1{
+    padding-left: 10px;
+
+}
+.warranty{
+    width: 11%;
+      margin-left: 44.5%;
+    border:1px solid #c8ad7f;
+}
+.maintanance{
+    width: 17%;
+     margin-left: 41.5%;
+    border:1px solid #c8ad7f;
+
+}
+.getintouch{
+    width: 18.75%;
+    margin-left: 40.6%;
+    border:1px solid #c8ad7f;
+
+}
+.ourbrands{
+    width: 14.7%;
+     margin-left: 42.6%;
+    border:1px solid #c8ad7f;
+}
+.wwa{
+    width:15.7%;
+     margin-left: 42.5%;
+    border:1px solid #c8ad7f;
+}
+.ul-dot{
+    list-style: none;
+    padding-left: 10px;
+    text-indent:-10px;
+}
+
+.banner img{
+    height: 400px;
+    width: 100%;
+}
+.ourvision{
+    width: 13.5%;
+     margin-left: 43%;
+    border:1px solid #c8ad7f;
+}
+.install{
+    width: 38%;
+    margin-left: 31%;
+    border: 1px solid #c8ad7f;
+}
+
+
+.section-heading1{
+    font-family:  "Open Sans",sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    font-weight:100;
+    text-align: center;
+    color: #222222;
+   
+    
+   
+}
+
+
+
+.section-image{
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 7px;
+    height: auto;
+    margin-top: 5px;
+}
+.section-image1{
+    border: 1px solid #ccc;
+    padding: 7px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.section-para1{
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    text-align: justify;
+    padding-left:20px;
+    
+}
+.section-para2{
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    text-align: center;
+    margin: 20px 0;
+    
+}
+.line{
+    border: 1px solid #c8ad7f;
+    
+}
+#tick{ 
+    padding-left:10px;
+    text-indent: -20px;
+    color: gray;
+
+}
+
+.subheading{
+    font-family:  "Open Sans",sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    
+    text-align: center;
+    
+    
+    margin-bottom: 0px;
+   
+}
+
+.para{
+     font-family:  "Open Sans",sans-serif;
+    background-color: #f2f4f8;
+    font-weight: 300;
+    text-align:center;
+    height: 150px;
+    padding: 35px 0 0 0;
+    margin-bottom: 20px;
+}
+
+.mar{
+    margin-left: 47.9%;
+}
+.form-part{
+   padding-left: 5px;
+  
+   width: 100%;
+   height: 35px;
+   border: 1px solid #ceb282;
+    background-color:#f2f4f8 ;
+}
+.form-part1{
+   padding-left: 5px;
+   width: 100%;
+   height: 200px;
+   border: 1px solid #ceb282;
+    background-color:#f2f4f8 ;
+}
+
+.button1{
+    background-color:black;
+    color:#fff;
+    padding:10px;
+    text-decoration:none;
+    font-size:14px;
+    width: 30%;
+    border:1px solid #ddd;
+   border-radius: 5px;
+}
+.button1:hover{
+    background-color: #ceb282;
+    color: black;
+}
+
+/******** search bar *****/
+.butto{
+     background-color:black;
+    color:#fff;
+    
+    text-decoration:none;
+    font-size:14px;
+    width: 50%;
+    border:1px solid #ddd;
+   border-radius: 10px;
+
+}
+
+.butto:hover{
+     background-color: #ceb282;
+    color: black;
+}
+
+.ico{
+    float: right;
+    margin-right: 6px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    color: black;
+    background: transparent;
+    border: transparent;
+}
+
+.form-part2{
+   padding-left: 5px;
+  
+   width: 100%;
+   height: 35px;
+   border: 1px solid #ceb282;
+    background-color:#f2f4f8 ;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/******   responsive media query  *******/
+@media  (max-width:479px){
+
+
+    .section-heading1{
+    
+    font-size: 25px;
+    }
+    
+    #header-nav{
+      padding:0px;
+      }
+      
+    .pad5{
+      padding:10px 0 0 10px;
+      width: 60%;
+      }
+
+    .section-heading2{
+    
+    font-size: 22px;
+    }
+
+    .subheading{
+        font-size: 20px;
+    }
+
+    .section-para2{
+        font-size:12px;
+    }
+    .banner{
+        height: 260px;
+    }
+    .banner img{
+    height: 260px;
+
+}
+.getintouch{
+    margin-left: 27.6%;
+    margin-bottom: 0;
+    width: 47.75%;
+}
+.mar{
+    margin-left: 42.9%;
+}
+
+.para{
+    font-size: 11px;
+    padding: 20px 0 0 0;
+    height: 100px;
+}
+
+.wwa{
+    width: 39.7%;
+    margin-left: 30.5%;
+}
+.warranty{
+    margin-left: 37.5%;
+    width: 28%;
+}
+
+.ourvision{
+    margin-left: 33%;
+    width: 35.5%;
+}
+.ourbrands{
+    margin-left:31.6%;
+    width: 37.7%;
+}
+.maintanance{
+    margin-left: 28%;
+    width: 45%;
+}
+.install{
+    margin-left: 4%;
+    width: 93%;
+}
+
+.section-image{
+    max-width: 250px;
+    margin: 15px 8%;
+}
+.section-para1{
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+    
+}
+
+@media (min-width:480px) and (max-width:768px){
+.pad5{
+      padding:10px 0 0 20px;
+      width: 70%;
+      }
+    .banner{
+        height: 360px;
+    }
+    .banner img{
+    height: 360px;
+
+}
+#header-nav{
+    padding: 0;
+}
+.section-heading1{
+    font-size: 30px;
+}
+.wwa{
+    margin-left: 33.5%;
+    width: 31.7%;
+}
+.warranty{
+    margin-left: 41.5%;
+    width: 17%;
+}
+.ourvision{
+    margin-left: 38%;
+    width: 26.5%;
+}
+.ourbrands{
+    margin-left: 37.6%;
+
+    width: 26.7%;
+}
+
+.maintanance{
+    margin-left: 28%;
+    width: 45%;
+}
+
+.install{
+    margin-left: 18%;
+    width: 65%;
+}
+
+.section-image{
+    max-width: 280px;
+    margin: 15px 15%;
+}
+.section-para1{
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+}
+
+@media(min-width:769px) and (max-width:1100px){
+    .wwa{
+        margin-left: 37.5%;
+        width: 24.7%;
+    }
+    .warranty{
+        margin-left: 42.5%;
+        width: 15%;
+
+    }
+    #cont{
+        width: 100%
+    }
+    .ourvision{
+        width: 22.5%;
+        margin-left: 39%;
+    }
+    .ourbrands{
+        margin-left: 40.6%;
+        width: 19.7%;
+    }
+    .maintanance{
+    margin-left: 35.5%;
+    width: 29%;
+}
+.install{
+    margin-left: 24%;
+    width: 53%;
+}
+}
+
+@media(min-width:768px){
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+}

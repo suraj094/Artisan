@@ -1,0 +1,68 @@
+extends ../layouts/default
+
+block content
+
+	section.banner
+		img(src='./images/inner-banner.jpg')
+	.section-center
+		h1.section-heading GET IN TOUCH
+			hr.underline
+	section.container.pad
+		div
+			p.subheading.pad Reach Us At
+			img.mar(src='./images/bordr.jpg')
+		div
+			p.section-para2 	We love to listen and we are eagerly waiting to talk to you regarding your project. Post any queries you have and we will get<br>back to you as soon as possible.
+		.row
+			.col-md-4.col-sm-4
+				p.para Artisan Furnishings Contact <br><br>C-143, Lajpat Nagar 1<br>New Delhi – 110024
+			.col-md-4.col-sm-4
+				p.para artisandecor@artisanindia.com
+			.col-md-4.col-sm-4
+				p.para 011-41749046, 41005869, 41028554<br><br>+91- 9205974003
+
+		.col-md-5.col-sm-5.pad
+			div
+				h5 POST YOUR QUERY
+			div
+				form(action='#', method='post')
+					fieldset.pad
+						input.form-part(type='text', name='name', placeholder='Name', required='')
+					fieldset.pad
+						input.form-part(type='text', name='email', placeholder='Email', required='')
+					fieldset.pad
+						input.form-part(type='text', name='subject', placeholder='Subject', required='')
+					fieldset.pad
+						textarea.form-part1(type='textarea-18', name='message', placeholder='Message', required='')
+					fieldset.pad
+						input.button1(type='submit', name='submit', value='SUBMIT')
+		.col-md-6.col-md-offset-1.col-sm-5.col-sm-offset-1.pad
+			div
+				h5 OUR LOCATION
+				iframe.pad(src='https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d14015.440589777996!2d77.240732!3d28.573961999999998!3m2!1i1024!2i768!4f13.1!2m1!1sArtisan+India!5e0!3m2!1sen!2sin!4v1487310940238', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
+				
+					
+					
+
+	//- .container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

@@ -1,0 +1,85 @@
+extends ../layouts/default
+
+block content
+	section.banner
+		img(src="../images/slider-3.jpg")
+	.section-center
+		h1.section-heading Warranty
+			hr.underline
+	section.container
+		div
+			.col-md-3.col-sm-3.col-xs-12.section-image
+				img(src="../images/warrenty.jpg", width="100%")
+			.col-md-9.col-sm-9.col-xs-12
+				p.section-para1 Artisan Furnishings Pvt. Ltd. Warrants to the purchaser that for a period of three years after delivery, our Vinyl wallcovering products will be free of manufacturing defects, will conform to the technical data/specifications and
+					|	will not separate from paper backing or staining caused by defects in the products.
+				br
+
+				p.section-para1
+					| The limited warranty does not cover and expressly excludes any claim, damage, loss or expense arising out of or relating to :
+				ul.ul-dot
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Accident or vandalism
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Abuse, misuse or unapproved use of the product
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Mold or Mildew
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Abnormal Conditions of Use
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Moisture in the surface
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Improper maintenance or failure to Maintain
+					li.section-para1
+						span#tick.fa.fa-check.fa-spacing(aria-hidden="true")
+						| Construction deficiencies of any kind or nature
+				
+					
+				br
+				p.section-para1 The limited warranty extends to free replacement of the product (or similar product in lieu in case the original selection is unavailable) along with installation, and does not cover any other expenses, claims or losses arising out of the same.
+
+			
+
+
+
+
+
+
+
+	//.container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+
+
+
+
+
+
+
+
+
+
+
