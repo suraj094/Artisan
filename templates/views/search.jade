@@ -76,7 +76,9 @@ block intro
                         li.cb1
                             input(type = 'checkbox' name = 'color' value = 'INDIGO')#cb20
                             label(for = 'cb20') indigo
-                        button#button-filter1.btn.btn-default(type = 'button') Show More
+                        i#button-filter1.fa.fa-arrow-down(type = 'button')
+                        span
+                        i#button1.fa.fa-filter.filterbutton(onclick="javascript:applySetting()")
                 section.base-col
                     h3.filter-heading accent / pattern
                     ul.filter-list
@@ -140,7 +142,9 @@ block intro
                         li.cb1
                             input(type = 'checkbox' name = 'pattern' value = 'INDIGO')#cb40
                             label(for = 'cb40') indigo
-                        button#button-filter2.btn.btn-default(type = 'button') Show More
+                        i#button-filter2.fa.fa-arrow-down(type = 'button')
+                        span
+                        i#button2.fa.fa-filter.filterbutton(onclick="javascript:applySetting()")
                 section.base-col
                     h3.filter-heading manufacture / supplier
                     ul.filter-list
@@ -177,7 +181,9 @@ block intro
                         li.cb3
                             input(type = 'checkbox' name = 'supplier' value = 'ROYSONS')#cb51
                             label(for = 'cb51') roysons
-                        button#button-filter3.btn.btn-default(type = 'button') Show More
+                        i#button-filter3.fa.fa-arrow-down(type = 'button')
+                        span
+                        i#button3.fa.fa-filter.filterbutton(onclick="javascript:applySetting()")
                 section.base-col
                     h3.filter-heading collection
                     ul.filter-list
@@ -298,7 +304,9 @@ block intro
                         li.cb4
                             input(type = 'checkbox' name = 'Collection' value = 'NATURAL_INSTINCT')#cb90
                             label(for = 'cb90') NATURAL INSTINCT
-                        button#button-filter4.btn.btn-default(type = 'button') Show More
+                        i#button-filter4.fa.fa-arrow-down(type = 'button')
+                        span
+                        i#button-4.fa.fa-filter.filterbutton(onclick="javascript:applySetting()")
                 section.base-col
                     h3.filter-heading style
                     ul.filter-list
@@ -338,17 +346,9 @@ block intro
                         li.cb5
                             input(type = 'checkbox' name = 'style' value = 'FLORAL')#cb102
                             label(for = 'cb102') FLORAL
-                        button#button-filter5.btn.btn-default(type = 'button') Show More
-                section.base-col
-                    h3.filter-heading availability
-                    ul.filter-list
-                        li
-                            input(type = 'checkbox' name = 'style' value = 'INSTOCK')#cb91
-                            label(for = 'cb91') IN-STOCK
-                        li
-                            input(type = 'checkbox' name = 'style' value = 'NONSTOCK')#cb92
-                            label(for = 'cb92') NON-STOCK
-                button#button.btn.btn-default(type = 'button') Filter
+                        i#button-filter5.fa.fa-arrow-down(type = 'button')
+                        span
+                        i#button5.fa.fa-filter.filterbutton(onclick="javascript:applySetting()")
             .col-md-9
                 if products.length
                     each product in products
