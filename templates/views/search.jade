@@ -7,6 +7,8 @@ block intro
                 hr.underline
         .section-height
             .col-md-3
+            a#filter-btn(style = "display : none;" href = "/collections/" + Product.cat_name ,onclick= "localStorage.checkboxValues = null;")
+                    i.fa.fa-refresh.fa-2x
                 section.base-col
                     form.form-inline(role="search", action="/search", method="GET")
                         fieldset.pad.pad5
