@@ -91,6 +91,7 @@ exports = module.exports = function (app) {
         
        
 		);
+		view.query('Product', keystone.list('Product').model.findOne({'cat_name' : req.params.collectionname}));
 		view.render('search');
 });
 	// app.get('/collections/ashford',  routes.views.Collections.products);
