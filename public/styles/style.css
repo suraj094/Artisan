@@ -297,14 +297,16 @@ a.button:link{
  }
 
 .copyright{
-    font-family:'Open Sans',sans-serif;
-    float:left;
+        font-family:'Open Sans',sans-serif;
+        /*float:left;*/
+        text-align: center;
     }
     .about{
-    font-size:12px;
-    color:#888888;
-    font-family:'Open Sans',sans-serif;
-    float:right;
+        display: none;
+        font-size:12px;
+        color:#888888;
+        font-family:'Open Sans',sans-serif;
+        float:right;
     }
     .footer-links{
         text-decoration:none;
