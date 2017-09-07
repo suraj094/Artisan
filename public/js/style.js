@@ -250,3 +250,31 @@ var $window = $(window);
 
 var year = document.querySelector("#year");
 year.textContent = new Date().getFullYear();
+
+function SUBSCRIBE(){
+var url = window.location.href; 
+  $('#subscribe').submit(function(e) {
+    var email = document.getElementById('emailId');
+    if(!email.value){
+        alert("Fill All Fields !");
+        return false;
+    }
+    else
+    {
+        $.ajax({
+        url: "https://mailthis.to/ms81291@gmail.com", //artisandecor@artisanindia.com
+        method: "POST",
+        data: {email: email.value},
+        dataType: "text/html",
+});
+      e.preventDefault();
+      $(this).get(0).reset();
+      document.getElementById('emailId').value = "Thank You for subscribing our newsletter";
+      setTimeout(function(){
+        location.reload();
+      }, 6000);
+    }
+
+  });
+  
+}

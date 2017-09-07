@@ -120,14 +120,13 @@ html
 										br
 										|                     
 										h2.footer1-head Newsletter
-										|                     
-										p.footer1-para Subscribe to our newsletter
-										|                     
-										form
-											input.text-area(type="text")
+										|                                          
+										form#subscribe
+											p.footer1-para Subscribe to our newsletter
+											input#emailId.text-area(type="text")
 											br
 											|                     
-											a.button(href="#") Subscribe
+											button.button(type='submit', onclick='SUBSCRIBE()') Subscribe
 										br
 										|                 
 									.col-md-4.col-md-offset-1
