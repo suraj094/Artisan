@@ -262,7 +262,7 @@ var url = window.location.href;
     else
     {
         $.ajax({
-        url: "https://mailthis.to/ms81291@gmail.com", //artisandecor@artisanindia.com
+        url: "https://mailthis.to/artisandecor@artisanindia.com",
         method: "POST",
         data: {email: email.value},
         dataType: "text/html",
