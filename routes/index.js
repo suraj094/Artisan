@@ -87,9 +87,6 @@ exports = module.exports = function (app) {
 		 	view.query('products', keystone.list('Product').model.find(
 		  {$text: {$search : req.query.keywords } },
             {score : {$meta: "textScore"} }).sort({score : {$meta : 'textScore'} }). limit()
-			
-        
-       
 		);
 		view.query('Product', keystone.list('Product').model.findOne({'cat_name' : req.params.collectionname}));
 		view.render('search');
