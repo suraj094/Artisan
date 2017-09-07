@@ -272,9 +272,41 @@ var url = window.location.href;
       document.getElementById('emailId').value = "Thank You for subscribing our newsletter";
       setTimeout(function(){
         location.reload();
-      }, 6000);
+      }, 5000);
     }
 
+  });
+  
+}
+
+function SUBMIT(){
+var url = window.location.href; 
+  $('#form').submit(function(e) {
+    var name = document.getElementById('cont_name');
+    var email = document.getElementById('cont_email');
+    var sub = document.getElementById('cont_subject');
+    var message = document.getElementById('cont_message');
+    if (!name.value || !email.value || !message.value || !sub.value) {
+      alert("Fill All Fields !");
+      return false;
+    } else {
+    $.ajax({
+    url: "https://mailthis.to/artisandecor@artisanindia.com", //
+    method: "POST",
+    data: {name: name.value,
+       email: email.value,
+       subject : sub.value,
+        message : message.value},
+    dataType: "text/html",
+});
+      e.preventDefault();
+      $(this).get(0).reset();
+      document.getElementById('return-text-contact').innerHTML = "Thank You! We will contact you soon";
+    //   document.getElementById('return-text-contact').style.display = "block";
+    setTimeout(function(){
+	location.reload();
+	},5000);
+    }
   });
   
 }

@@ -25,17 +25,18 @@ block content
 			div
 				h5 POST YOUR QUERY
 			div
-				form(action='#', method='post')
+				form#form
 					fieldset.pad
-						input.form-part(type='text', name='name', placeholder='Name', required='')
+						input#cont_name.form-part(type='text', name='name', placeholder='Name', required='')
 					fieldset.pad
-						input.form-part(type='text', name='email', placeholder='Email', required='')
+						input#cont_email.form-part(type='email', name='email', placeholder='Email', required='')
 					fieldset.pad
-						input.form-part(type='text', name='subject', placeholder='Subject', required='')
+						input#cont_subject.form-part(type='text', name='subject', placeholder='Subject', required='')
 					fieldset.pad
-						textarea.form-part1(type='textarea-18', name='message', placeholder='Message', required='')
+						textarea#cont_message.form-part1(type='textarea-18', name='message', placeholder='Message', required='')
+					#return-text-contact
 					fieldset.pad
-						input.button1(type='submit', name='submit', value='SUBMIT')
+						input.button1(type='submit', name='submit', value='SUBMIT', onclick="SUBMIT()")
 		.col-md-6.col-md-offset-1.col-sm-5.col-sm-offset-1.pad
 			div
 				h5 OUR LOCATION
