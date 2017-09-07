@@ -86,7 +86,7 @@ exports = module.exports = function (app) {
 		var view = new keystone.View(req, res);
 		 	view.query('products', keystone.list('Product').model.find(
 		  {$text: {$search : req.query.keywords } },
-            {score : {$meta: "textScore"} }).sort({score : {$meta : 'textScore'} }). limit(20)
+            {score : {$meta: "textScore"} }).sort({score : {$meta : 'textScore'} }). limit()
 			
         
        
